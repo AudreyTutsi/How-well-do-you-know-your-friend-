@@ -1,0 +1,77 @@
+const questions = [
+	"What do you think is the most challenging aspect of my hobbies or interests?",
+	"If you could recommend a TV show or series for us to watch together, what would it be and why?",
+	"What was your initial impression of me when we first met?",
+	"If we were to create a playlist together, what song would you add as the first track?",
+	"If you were to buy me a gift based on my personality and style, what would it be?",
+	"On a scale of 1-10, how organized do you think my living space is? 1 being extremely organized, 10 being extremely cluttered. Explain.",
+	"Do you think I have a green thumb or struggle to keep plants alive? Explain.",
+	"Do I come across as approachable and friendly? Explain.",
+	"Do I seem like someone who enjoys trying new things or sticking to familiar routines? Explain.",
+	"Finish the sentence: Just by looking at you, I'd think we would get along really well because ____________.",
+	"What do my clothes tell you about my personal style?",
+	"Have we ever crossed paths before we became friends? If so, where and when?",
+	"How would you describe my sense of humor in three words?",
+	"What's something you appreciate about our friendship?",
+	"What do you think I'm most likely to splurge on when treating myself?",
+	"As a child, what do you think I was most passionate about?",
+	"Finish the sentence: just by looking at you I'd think we share a common interest in ____________.",
+	"Do you think I am outgoing or introverted? Explain.",
+	"What's a moment from our friendship that made you happy this past year?",
+	"Have you ever changed your opinion about something related to our friendship? If so, what was it?",
+	"What's a shared memory that brings a smile to your face?",
+	"What's a lesson you've learned in our friendship that has helped you grow as a person?",
+	"Is there anything you've been keeping from me that you think I should know?",
+	"What's a question you've been trying to find an answer to in your life, and how can I support you in finding it?",
+	"When was the last time you did something that surprised even yourself?",
+	"What title would you give to this chapter of our friendship?",
+	"What's something you wish you had more of in your life?",
+	"Finish the sentence: Strangers would describe our friendship as ______ only we know that it's actually _______.",
+	"What's the most meaningful conversation we've ever had?",
+	"What's the most significant challenge we've faced together, and how did we overcome it?",
+	"How can you become an even better friend to me?",
+	"Do you think our friendship accurately represents who we are as individuals?",
+	"Is there anyone from our past that you think we should reconnect with?",
+	"What's your go-to comfort food when you're having a tough day?",
+	"Do you think I intimidate others when they first meet me? Why or why not?",
+	"How honest are you when people ask you how you're feeling?",
+	"Based on what you know about me, what book would you recommend I read next?",
+	"What's something about me that initially surprised you, but now you can't imagine me without it?",
+	"Based on our friendship, do you have a movie or series recommendation for us to watch together?",
+	"What do you think is my greatest strength in our friendship?",
+	"What's one thing you think I could do to improve our friendship?",
+	"What gift would you give me that you think would make my day?",
+	"How would you describe me to a new friend?",
+	"What do you think I need to hear from you right now?",
+	"Based on what you've learned about me, does my social media accurately represent who I am?",
+	"What's a lesson you'll take away from our friendship?",
+	"What can I help you with in your life?",
+	"What do you think I fear the most in friendships?",
+	"Where do you think I excel in giving advice?",
+	"What about me is the most difficult for you to understand?",
+	"If we were in a band together, what would we name it?",
+	"Admit something that you've been hesitant to tell me.",
+	"What qualities do you see in me that remind you of yourself?",
+	"How do you think our personalities complement each other in our friendship?",
+	"What do you think I should know about myself that I might be unaware of?",
+	"What can we create together as friends?",
+	"What answer of mine made you feel a strong connection to me?",
+	"What's the most attractive quality about me that isn't physical?",
+	"WILDCARD: Based on what you've learned about me, rewrite my social media bio. (30 sec)",
+	"Am I like you expected me to be as a friend?",
+	"What do you admire most about our friendship?",
+	"How would you describe our friendship to a stranger?",
+	"WILDCARD: Draw a picture of a memorable moment we shared. Compare.",
+];
+
+function displayRandom() {
+	const randomQuestion =
+		questions[Math.floor(Math.random() * questions.length)];
+	const randomQuestionElement = document.getElementById("random");
+	randomQuestionElement.innerText = randomQuestion;
+}
+
+displayRandom();
+
+const newQuestionButton = document.getElementById("newQuestionButton");
+newQuestionButton.addEventListener("click", displayRandom);
